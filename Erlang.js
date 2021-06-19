@@ -23,11 +23,12 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 //
+var process = require("process");
+var zlib = require("zlib");
 
 exports.Erlang = new function() {
 var Erlang = this; // namespace
 
-var zlib = require('zlib');
 
 // tag values here http://www.erlang.org/doc/apps/erts/erl_ext_dist.html
 var TAG_VERSION = 131;

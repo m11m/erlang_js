@@ -14,12 +14,28 @@
     ],
     "main": "Erlang.js",
     "scripts": {
-        "test": "node tests/ErlangTests.js"
+        "test": "node tests/ErlangTests.js",
+        "build": "node scripts/build.js"
     },
-    "dependencies": {},
-    "devDependencies": {},
+    "devDependencies": {
+        "moduloze": "^0.8.0"
+    },
     "optionalDependencies": {},
     "engines": {
         "node": "*"
+    },
+    "exports": {
+        ".": [
+            {
+                "import": "./esm/Erlang.mjs",
+                "require": "./Erlang.js",
+                "default": "./Erlang.js"
+            },
+            "./Erlang.js"
+        ]
+    },
+    "mz-dependencies": {
+        ":::process": "NodeProcess",
+        ":::zlib": "NodeZlib"
     }
 }
